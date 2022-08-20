@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# Prints a string indefinitely and catches some signals
-clean_up_action='rm /var/run/myscript.pid; exit $?'
-
-echo $$ > "/var/run/myscript.pid"
-trap 'echo "I hate the kill command"; '"$clean_up_action" SIGTERM
+# print To infinity and beyond indefinitely with delay 2 and handle different signal and save my pid in a file
+sudo bash -c "echo $$ > /var/run/holbertonscript.pid"
 trap 'echo "Y U no love me?!"' SIGINT
-trap ''"$clean_up_action" SIGQUIT
+trap "sudo rm -f /var/run/holbertonscript.pid; exit" SIGQUIT
+trap "sudo rm -f /var/run/holbertonscript.pid; echo I hate the kill command; exit" SIGTERM
 
-while true; do
-  echo "To infinity and beyond"
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+
 done
