@@ -1,4 +1,5 @@
 API Advanced
+
 This project contains more tasks for learning how to consume RESTful APIs.
 
 Tasks To Complete
@@ -10,6 +11,7 @@ Requirements:
 Prototype: def number_of_subscribers(subreddit).
 If not a valid subreddit, return 0.
 NOTE: Invalid subreddits may return a redirect to search results. Ensure that you are not following redirects.
+
  1. Top Ten
 1-top_ten.py contains a Python function queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
 
@@ -17,7 +19,8 @@ Requirements:
 Prototype: def top_ten(subreddit).
 If not a valid subreddit, print None.
 NOTE: Invalid subreddits may return a redirect to search results. Ensure that you are not following redirects.
- 2. Recurse it!
+
+2. Recurse it!
 2-recurse.py contains a recursive Python function that queries the Reddit API and returns a list containing the titles of all hot articles for a given subreddit. If no results are found for the given subreddit, the function should return None.
 
 Hint: The Reddit API uses pagination for separating pages of responses.
@@ -27,7 +30,8 @@ Note: You may change the prototype, but it must be able to be called with just a
 If not a valid subreddit, return None.
 NOTE: Invalid subreddits may return a redirect to search results. Ensure that you are not following redirects.
 Your code will NOT pass if you are using a loop and not recursively calling the function! This /can/ be done with a loop but the point is to use a recursive function. :)
- 3. Count it!
+
+3. Count it!
 100-count.py contains a recursive Python function that queries the Reddit API, parses the title of all hot articles, and prints a sorted count of given keywords (case-insensitive, delimited by spaces. Javascript should count as javascript, but java should not).
 
 Requirements:
